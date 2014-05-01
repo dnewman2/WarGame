@@ -1,9 +1,15 @@
 import java.util.ArrayList;
+
+/*
+   David Newman
+   CS 110
+   This class creates a hand of cards for the cardgame War
+*/
 public class WarHand extends Pile //this class creates a hand for a player engaged in a game of war
 {
 	private static Deck deck = new Deck(); //for holding a deck of cards - VARIABLE IS STATIC SO THAT WHEN SECOND HAND IS CREATED, IT CAN'T HAVE SAME CARDS AS THE FIRST HAND	
 	
-	/*
+	/**
 		Creates a warHand
 	*/							
 	public WarHand() //creates one war hand from half of a deck
@@ -16,7 +22,7 @@ public class WarHand extends Pile //this class creates a hand for a player engag
 		}
 	}
 	
-	/*
+	/**
 		Deck returns the remainder of the deck
 		@return the deck
 	*/

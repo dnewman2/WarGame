@@ -1,8 +1,14 @@
 import java.util.Random;
 import java.util.ArrayList;
+
+/**
+   David Newman
+   CS 110
+   This class creates a deck of cards
+*/
 public class Deck extends Pile
 {
-	/*
+	/**
 		Constructor creates a 52 card deck
 	*/
 	public Deck() //constructor creates a 52 card deck
@@ -17,7 +23,7 @@ public class Deck extends Pile
 		}
 	}
 	
-	/*
+	/**
 		Shuffles the cards
 	*/
 	public void shuffle()
@@ -36,7 +42,7 @@ public class Deck extends Pile
 		}
 	}
 		
-	/*
+	/**
 		returns the deck
 		@return the deck
 	*/

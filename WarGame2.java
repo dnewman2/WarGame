@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/**
+   David Newman
+   CS 110
+   This class contains all of the methods needed for playing a game of war
+*/
 public class WarGame2
 {
 	WarHand compHand;   //for holding the hands
@@ -24,7 +29,7 @@ public class WarGame2
 	Card playerWarInitiator;
 	Card compWarInitiator;
 
-	/*
+	/**
 		Constructor instantiates the objects
 	*/
 	public WarGame2()
@@ -39,25 +44,25 @@ public class WarGame2
 		
 	}
 	
-	/*
+	/**
 		removes and returns a card from the BEGINNING (top) of computer's hand
 		@return the card
 	*/
 	public Card playCompCard()
 	{
-		return compHand.getCard(0); //
+		return compHand.getCard(0); 
 	}
 	
-	/*
+	/**
 		removes and returns a card from the BEGINNING (top) of player's hand
 		@return the card
 	*/
 	public Card playPlayerCard()
 	{
-		return playerHand.getCard(0); //removes and returns a card from the BEGINNING (top) of player's hand
+		return playerHand.getCard(0); 
 	}
 	
-	/*
+	/**
 		determines whether a war will occur
 		@return whether or not a war will occur
 	*/
@@ -69,19 +74,13 @@ public class WarGame2
 			return false;
 	}
 	
-	/*
-		plays the hand
+	/**
+		plays the hand, when there is NOT a war
 		@return the result of the play
 	*/
 	public String play(Card playerCard, Card compCard) //only used when the ranks are not equal!
 	{
 		empty = false;
-		
-		/*if (playerHand.getSize() == 0 || compHand.getSize == 0) //if computer or player has an empty hand
-			empty = true;*/
-			
-		/*if (!empty) //if neither of the hands were empty
-		{*/
 			
 			if (compCard.getRank() > playerCard.getRank()) //if computer's card is higher
 			{
@@ -108,73 +107,44 @@ public class WarGame2
 			
 			return result;
 	}
-		
-		
 
-	
-	/*public String war()
-	{	
-		inWar = true;
-		
-		if (playerHand.getSize() >= 2 && compHand.getSize() >= 2)	//if both hands have enough cards for war
-		{
-			Card hiddenPlayerCard = playPlayerCard(); //get a card from each player
-			Card hiddenCompCard = playCompCard();
-					 //if both hands have enough cards
-//			Thread.sleep(100);
-		}
-		
-		else //if one or both of the hands had less than two cards
-		{
-			if (playerHand.getSize() < 2 && compHand.getSize() < 2)
-				result = "tie";
-			else if (playerHand.getSize() < 2)
-				result = "playerlost";
-			else
-				result = "computerlost";
-		}
-		return result;
-	}*/
-	
-	
-	
-	/*
+	/**
 		for adding cards to computer hand
 		@param a computer card
 	*/
-	public void addCompCard(Card compCard) //
+	public void addCompCard(Card compCard) 
 	{
 		compHand.addCard(compCard);
 	}
 
-	/*
+	/**
 		for adding cards to player hand
 		@param a player card
 	*/
-	public void addPlayerCard(Card playerCard) //for adding card to player hand
+	public void addPlayerCard(Card playerCard) 
 	{
 		playerHand.addCard(playerCard);
 	}
 	
-	/*
+	/**
 		returns size of player hand
 		@return the size of player's hand
 	*/
-	public int getPlayerHandSize() //returns size of player hand
+	public int getPlayerHandSize() 
 	{
 		return playerHand.getSize();
 	}
 	
-	/*
+	/**
 		returns size of computer hand
 		@return the size of computer's hand
 	*/
-	public int getCompHandSize() //returns size of computer hand
+	public int getCompHandSize()
 	{
 		return compHand.getSize();
 	}
 	
-	/*
+	/**
 		stores the player's card that initiated the most recent war
 	*/
 	public void setPlayerWarInitiator() //
@@ -182,69 +152,69 @@ public class WarGame2
 		playerWarInitiator = playerWarCards.get(playerWarCards.size() - 1); 
 	}
 	
-	/*
+	/**
 		stores the computer's card that initiated the most recent war
 	*/
-	public void setCompWarInitiator() //stores the computer's card that initiated the most recent war
+	public void setCompWarInitiator() 
 	{
 		compWarInitiator = compWarCards.get(compWarCards.size() - 1);
 	}
 	
-	/*
+	/**
 		sets the player's card that initiated the most recent war
 		@param a player card
 	*/
-	public void setPlayerWarInitiator(Card playerWarInitiatorCard) //sets the player's card that initiated the most recent war
+	public void setPlayerWarInitiator(Card playerWarInitiatorCard) 
 	{
 		playerWarInitiator = playerWarInitiatorCard;
 	}
 	
-	/*
+	/**
 		sets the computer's card that initiated the most recent war
 		@param a computer card
 	*/
-	public void setCompWarInitiator(Card compWarInitiatorCard) //sets the computer's card that initiated the most recent war
+	public void setCompWarInitiator(Card compWarInitiatorCard)
 	{
 		compWarInitiator = compWarInitiatorCard;
 	}
 	
-	/*
+	/**
 		return the last card in the player's war array
 		@return the last card in the player's war array
 	*/
 	public Card getPlayerWarInitiator() //
 	{
-		return playerWarInitiator; //return the last card in the player's war array
+		return playerWarInitiator; 
 	}
 	
-	/*
+	/**
 		return the last card in the computer's war array
 		@return the last card in the computer's war array
 	*/
 	public Card getCompWarInitiator()
 	{
-		return compWarInitiator;  //return the last card in the player's war array
+		return compWarInitiator;  
 	}
 	
-	/*
+	/**
 		adds a player's card to the array holding the cards during war
 		@param a player's card
 	*/
-	public void addCardPlayerWarHand(Card playerCard) //adds a player's card to the array holding the cards during war
-	{
+	public void addCardPlayerWarHand(Card playerCard) 
+   {
 		playerWarCards.add(playerCard);
 	}
 	
-	/*
+	/**
 		adds a computer's card to the array holding the cards during war
 		@param a computer's card
 	*/
-	public void addCardCompWarHand(Card compCard) //adds a comp's card to the array holding the cards during war
+	public void addCardCompWarHand(Card compCard) 
 	{
 		compWarCards.add(compCard);
 	}
 	
-	/*
+	/**
 		simulates a war
 		@return the result of the war
 	*/

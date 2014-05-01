@@ -1,4 +1,4 @@
-/*
+/**
    David Newman
    CS 110
    This class makes a card and has various methods
@@ -19,14 +19,9 @@ public class Card
    
    private int rank; //The rank
    private int suit; //The suit
-   /*
-		null Constructor
-	*/
-	public Card() //null constructor, needed for deck class - or maybe not....
-	{
-	}
+
 	
-	/*
+	/**
 		Assigns suit and rank
 	*/
    public Card(int suit, int rank) //Constructor
@@ -34,7 +29,7 @@ public class Card
       this.suit = suit;
       this.rank = rank;
    }
-   /*
+   /**
 		Returns suit
 		@return the suit
 	*/
@@ -43,7 +38,7 @@ public class Card
       return suit;
    }
    
-	/*
+	/**
 		Returns rank
 		@return the rank
 	*/
@@ -52,7 +47,7 @@ public class Card
       return rank;
    }
    
-	/*
+	/**
 		displays rank and suit
 		@return the rank and suit
 	*/
@@ -89,7 +84,7 @@ public class Card
       return ("the suit is " + suitName + " and the rank is " + rankName + "."); //Displays the suit name and the card's rank
    }
    
-	/*
+	/**
 		compares ranks of two cards
 		@param a card
 		@return whether or not the cards have the same rank
@@ -102,7 +97,7 @@ public class Card
          return false;
    }
 	
-	/*
+	/**
 		Creates a filename for each card
 		@return the filename
 	*/

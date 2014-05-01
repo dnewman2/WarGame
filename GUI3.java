@@ -4,7 +4,11 @@ import java.awt.event.*;
 import java.util.ArrayList;
 //import java.lang.Thread;
 
-
+/**
+   David Newman
+   CS 110
+   This is the driver class for the war game
+*/
 
 public class GUI3 extends JFrame
 {
@@ -49,15 +53,12 @@ public class GUI3 extends JFrame
 	
 	ImageIcon warCard;
 	
-	/*
+	/**
 		Creates the frame for the game
 	*/
 	public GUI3()
 	{	
 		setBackground(Color.BLUE);
-
-
-
 		
 		end = new ImageIcon("theend.jpg");
 		
@@ -163,7 +164,7 @@ public class GUI3 extends JFrame
 		
 		setVisible(true); //makes the frame visible
 	}
-	/*
+	/**
 		ButtonListener executes the button action
 	*/
 	private class ButtonListener implements ActionListener 
@@ -322,7 +323,10 @@ public class GUI3 extends JFrame
 				
 		}		
 	}
-	
+	/**
+      delays the program
+      @param the delay time (in milliseconds)
+  */    
 	public void sleep(int delayTime)
 	{
 		long t1 = System.currentTimeMillis();
@@ -331,7 +335,9 @@ public class GUI3 extends JFrame
 		while ((t2 - t1) < delayTime)
 			t2 = System.currentTimeMillis();
 	}
-	
+	/**
+      runs the GUI
+   */
 	public static void main(String[] args)
 	{
 		new GUI3();
